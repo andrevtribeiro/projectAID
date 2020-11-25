@@ -1,0 +1,7 @@
+create or replace view Contact(FirstName,LastName,Address,City,State,Country,PostalCode,Phone,Fax,Email) as
+select FirstName,LastName,Address,City,State,Country,PostalCode,Phone,Fax,Email
+from Customer
+union
+select FirstName,LastName,Address,City,State,Country,PostalCode,Phone,Fax,Email
+from Employee
+order by FirstName;
